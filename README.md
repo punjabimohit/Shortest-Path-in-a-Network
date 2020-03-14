@@ -40,32 +40,20 @@ Application of Shortest Path problem:
 22
 23     return dist, prev
 
-Program Description:
-Programming Language : JAVA Compiler Version: JDK 1.8.0_151 OS: Windows X System [Not tested for UNIX system]
 
-Compile the program:
-Before building the java class file make sure java(i.e jdk1.8) is installed in the system.
-
-Command to build java class files:
-javac Graph.java
-Once the above command is executed, a class file named filename.class is created
-
-Run the Program:
-Arguments passed are
 
 InputfileName - The file which has the nodes of the network with weights
-Command to run java program:
-java ClassName InputfileName < QueryfileName > OutputfileName
-Example: java Graph network.txt <  queries.txt > output.txt
-Note: ClassName has the main function
 
 Data Structure:
 Heap data structure is used to implement the algorithm and have design min binary heap (priority queue) where smallest element has the highest priority (root node in tree shape)
+
 HashMap data structure is used to store information about the vertex
+
 LinkedList data structure is used to add all the edges of the graph
-TreeSet data structure stores the visited nodes [Sorted sort, no duplicate values]. It sorts the vertex in alphabetical order useful while printing the graph.
+
+OrderedSet data structure stores the visited nodes [Sorted sort, no duplicate values]. It sorts the vertex in alphabetical order useful while printing the graph.
 Implementation:
-Implementation code is in single file Graph.java which has complete 5 tasks required for the project. The algorithm implemented is an algorithm used to find the shortest path between nodes in graph called as Dijkstra's Algorithm. Adding to the above task, the reachable vertices task is accomplish using recursive algorithm (not using the shortest path algorithm described above) to find the vertices connected to each vertex. The task of reachable is achieved in O(n logn) time, where n = Number of vertices.
+There are 5 tasks in this project. The algorithm implemented is an algorithm used to find the shortest path between nodes in graph called as Dijkstra's Algorithm. Adding to the above task, the reachable vertices task is accomplish using recursive algorithm (not using the shortest path algorithm described above) to find the vertices connected to each vertex. The task of reachable is achieved in O(n logn) time, where n = Number of vertices.
 
 Classes used to achieve the implementation are:
 
@@ -74,8 +62,7 @@ Vertex: Vertex class is used to represent vertex of the graph.
 Edge: Edge class is used to represent edges of the graph.
 Path: Path class stores name and distance of path.
 Pair: Pair class represents the String pairs.
-Heap: Heap Class is use to efficiently design Dijkstra's Algorithm using concept of minimum priority queue.
-GraphException: Used to signal violations of preconditions for shortest path algorithms.
+
 Task:
 Building the Graph: Using network input file we will build our graph. We have use double to handle the floating point distance. Each input link is represented by adding two edges, one in each direction
 Changes to the Graph: All the operations for the changes of the Graph are present in the Graph class.
