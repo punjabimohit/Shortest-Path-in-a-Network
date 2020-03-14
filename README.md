@@ -1,4 +1,5 @@
 # Shortest-Path in a Network
+
 Introduction:
 Consider a data communication network that must route data packets (email, MP3 files, or video files, for example). Such a network consists of routers connected by physical cables or links. A router can act as a source, a destination, or a forwarder of data packets. We can model a network as a graph with each router corresponding to a vertex and the link or physical connection between two routers corresponding to a pair of directed edges between the vertices.
 
@@ -8,10 +9,13 @@ For the purposes of this project, each link has associated with it the transmiss
 
 The shortest time path minimizes the sum of the transmission times of the links along the path. The network topology can change dynamically based on the state of the links and the routers. For example, a link may go down when the corresponding cable is cut, and a vertex may go down when the corresponding router crashes. In addition to these transient changes, changes to a network occur when a link is added or removed.
 
+
 Application of Shortest Path problem:
-Given a number of cities with highways connecting them, find the shortest path from New York to Chicago. The traffic and length of the highways are path weights.
-Word Ladder puzzles
-Pseudocode of Dijkstra's using Priority Queue:
+
+1.>Given a number of cities with highways connecting them, find the shortest path from New York to Chicago. The traffic and length of the highways are path weights.
+2.>Word Ladder puzzles
+
+ Pseudocode of Dijkstra's using Priority Queue:
 1  function Dijkstra(Graph, source):
 2      dist[source] ← 0                                    // Initialization
 3
@@ -35,6 +39,7 @@ Pseudocode of Dijkstra's using Priority Queue:
 21                 Q.decrease_priority(v, alt)
 22
 23     return dist, prev
+
 Program Description:
 Programming Language : JAVA Compiler Version: JDK 1.8.0_151 OS: Windows X System [Not tested for UNIX system]
 
